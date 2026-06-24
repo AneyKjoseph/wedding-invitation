@@ -552,7 +552,7 @@ export default function App() {
             </div>
 
             {/* Custom SVG Watercolor Couple & Flower Arch Illustration */}
-            <div className="w-full max-w-lg mx-auto relative mt-6 mb-4" >
+            <div className="w-full max-w-lg mx-auto relative -mt-25 mb-4" >
               <img 
                 src= {backgroundImage}
                 alt="Couple" 
@@ -601,7 +601,7 @@ export default function App() {
             </div>
 
             {/* Glowing Ring-Dial Countdown Design */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto mb-12">
+            <div className="grid grid grid-cols-4 gap-2 max-w-2xl mx-auto mb-12 gap-2 max-w-2xl mx-auto mb-12">
               
               {/* DAYS DIAL */}
               <div className="bg-white/75 backdrop-blur-md rounded-3xl p-5 border border-[#E5A995]/25 shadow-lg relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
