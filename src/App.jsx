@@ -421,23 +421,6 @@ export default function App() {
       {/* Live Falling Petals Canvas */}
       <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full pointer-events-none z-10" />
 
-      {/* Love shower hearts trigger container */}
-      <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden">
-        {loveHearts.map((heart) => (
-          <div 
-            key={heart.id}
-            className="absolute bottom-0 animate-float-up text-red-400 opacity-90"
-            style={{ 
-              left: `${heart.x}%`, 
-              fontSize: `${heart.size}px`,
-              transform: `rotate(${heart.rotate}deg)`
-            }}
-          >
-            ❤️
-          </div>
-        ))}
-      </div>
-
       {/* MONOGRAM DOOR GATEKEEPER / ENVELOPE */}
       <div 
         className={`fixed inset-0 z-50 flex transition-all duration-[1200ms] ${isOpen ? 'pointer-events-none opacity-0 scale-105' : 'opacity-100'}`}
@@ -506,17 +489,7 @@ export default function App() {
 
       {/* MAIN INVITATION CARD CONTENT */}
       <div className={`relative z-20 min-h-screen transition-all duration-[1000ms] ${isOpen ? 'opacity-100' : 'opacity-0 filter blur-lg pointer-events-none'}`}>
-        
-        {/* FLOAT HEART LAUNCHER */}
-        <div className="fixed bottom-6 right-6 z-40">
-          <button 
-            onClick={triggerLoveShower}
-            className="w-14 h-14 bg-white/95 rounded-full shadow-lg border border-[#E5A995]/40 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform hover:bg-[#FFF2EC] group"
-            title="Shower the couple with love!"
-          >
-            <span className="group-hover:animate-bounce">❤️</span>
-          </button>
-        </div>
+      
 
         {/* SECTION 1: COVER ILLUSTRATION & INTERACTIVE CALENDAR */}
         <section className="relative pt-4 pb-2 px-4 flex flex-col items-center justify-center text-center">
@@ -579,7 +552,7 @@ export default function App() {
             </div>
 
             {/* Custom SVG Watercolor Couple & Flower Arch Illustration */}
-            <div className="w-full max-w-lg mx-auto relative mt-6 mb-4" >
+            <div className="w-full max-w-lg mx-auto relative -mt-25 mb-4" >
               <img 
                 src= {backgroundImage}
                 alt="Couple" 
@@ -628,7 +601,7 @@ export default function App() {
             </div>
 
             {/* Glowing Ring-Dial Countdown Design */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto mb-12">
+            <div className="grid grid grid-cols-4 gap-2 max-w-2xl mx-auto mb-12 gap-2 max-w-2xl mx-auto mb-12">
               
               {/* DAYS DIAL */}
               <div className="bg-white/75 backdrop-blur-md rounded-3xl p-5 border border-[#E5A995]/25 shadow-lg relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
